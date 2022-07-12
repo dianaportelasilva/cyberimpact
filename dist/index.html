@@ -2,12 +2,9 @@
 <html>
   <head>
     <title>Economic impact simulator</title>
-    <meta charset="UTF-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, shrink-to-fit=no"
-    />
-  </head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="/src.a2b27638.css"></head>
 
   <body>
     <div class="container">
@@ -18,20 +15,13 @@
           works.
         </p>
 
-        <hr />
+        <hr>
 
         <form class="col-md-8 offset-md-2 mt-4">
           <div class="form-group">
             <label for="cost">Value of contract or program</label>
             <div class="input-group mb-2">
-              <input
-                required
-                type="number"
-                class="form-control"
-                id="cost"
-                placeholder="10.000.000"
-                min="0"
-              />
+              <input required="" type="number" class="form-control" id="cost" placeholder="10.000.000" min="0">
               <div class="input-group-append">
                 <div class="input-group-text">€</div>
               </div>
@@ -44,14 +34,7 @@
           <div class="form-group">
             <label for="volume">Volume</label>
             <div class="input-group mb-2">
-              <input
-                required
-                type="number"
-                class="form-control"
-                id="volume"
-                placeholder="30.000"
-                min="0"
-              />
+              <input required="" type="number" class="form-control" id="volume" placeholder="30.000" min="0">
               <div class="input-group-append">
                 <div class="input-group-text">units</div>
               </div>
@@ -64,7 +47,7 @@
           <div class="form-group">
             <label for="days">Weekdays of affected service</label>
             <div class="input-group mb-2">
-              <select id="days" class="form-control" required>
+              <select id="days" class="form-control" required="">
                 <option>5</option>
                 <option>7</option>
               </select>
@@ -80,15 +63,7 @@
           <div class="form-group">
             <label for="proporcion">Proporcion of the affectance</label>
             <div class="input-group mb-2">
-              <input
-                required
-                type="number"
-                class="form-control"
-                id="proporcion"
-                placeholder="50"
-                max="100"
-                min="0"
-              />
+              <input required="" type="number" class="form-control" id="proporcion" placeholder="50" max="100" min="0">
               <div class="input-group-append">
                 <div class="input-group-text">%</div>
               </div>
@@ -101,14 +76,7 @@
           <div class="form-group">
             <label for="population">Population</label>
             <div class="input-group mb-2">
-              <input
-                required
-                type="number"
-                class="form-control"
-                id="population"
-                placeholder="3500"
-                min="1"
-              />
+              <input required="" type="number" class="form-control" id="population" placeholder="3500" min="1">
               <div class="input-group-append">
                 <div class="input-group-text">people</div>
               </div>
@@ -125,15 +93,15 @@
           <div class="alert alert-success d-none" role="alert">
             <h4 class="alert-heading">Affected percentage</h4>
             <p>
-              <span affected-days></span>% days
-              <br />
-              <span affected-capacity></span>% capacity
+              <span affected-days=""></span>% days
+              <br>
+              <span affected-capacity=""></span>% capacity
             </p>
             <h4 class="alert-heading">Cost estimated</h4>
-            <p><strong cost-estimated></strong>€</p>
+            <p><strong cost-estimated=""></strong>€</p>
             <h4 class="alert-heading">Cost per person</h4>
-            <p><span cost-per-person></span>€</p>
-            <hr />
+            <p><span cost-per-person=""></span>€</p>
+            <hr>
             <p>
               Whenever you need to, be sure to use margin utilities to keep
               things nice and tidy.
@@ -143,6 +111,6 @@
       </div>
     </div>
 
-    <script src="src/index.js"></script>
+    <script src="/src.a2b27638.js"></script>
   </body>
 </html>
