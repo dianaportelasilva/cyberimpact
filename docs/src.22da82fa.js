@@ -11,4 +11,4 @@ parcelRequire=function(e,r,t,n){var i,o="function"==typeof parcelRequire&&parcel
 },{"./utils/utils":"cMyF","./utils/intersection-observer":"bKoQ","./utils/swipeable":"GTRl"}],"H99C":[function(require,module,exports) {
 "use strict";require("bootstrap/dist/css/bootstrap.min.css");var e=require("cantil"),r=(0,e.query)("form");r.query("button").addEventListener("click",function(e){e.preventDefault();var t=r.checkValidity();if(r.reportValidity(),!t)return!1;var u=Number(r.query("#cost").value),a=(Number(r.query("#volume").value),Number(r.query("#days").value)),i=Number(r.query("#proporcion").value)/100*a,n=i/(5===a?250:365),o=n*u,s=(o/Number(r.query("#population").value)).toFixed(2);r.query("[affected-days]").innerText=i,r.query("[affected-capacity]").innerText=n,r.query("[cost-estimated]").innerText=o,r.query("[cost-per-person]").innerText=s,r.query(".alert").classList.remove("d-none")});
 },{"bootstrap/dist/css/bootstrap.min.css":"H97Y","cantil":"ZIfy"}]},{},["H99C"], null)
-//# sourceMappingURL=/src.22da82fa.js.map
+//# sourceMappingURL=src.22da82fa.js.map
