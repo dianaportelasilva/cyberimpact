@@ -6,10 +6,9 @@ let form = query("form");
 form.query("button").addEventListener("click", (event) => {
   event.preventDefault();
 
-  let status = form.checkValidity();
-  form.reportValidity();
-  if (!status) {
-    return false;
+  // validate form
+  if (!form.checkValidity()) {
+    return form.reportValidity();
   }
 
   // get form values
@@ -19,16 +18,17 @@ form.query("button").addEventListener("click", (event) => {
   let proporcion = Number(form.query("#proporcion").value) / 100;
   let population = Number(form.query("#population").value);
 
+  let currencyFormat = new Intl.NumberFormat('pt-PT', { style: 'currency', currency: 'EUR' });
   let affectedDays = proporcion * weekdays;
   let affectedCapacity = affectedDays / (weekdays === 5 ? 250 : 365);
   let costEstimated = affectedCapacity * cost;
-  let costPerPerson = (costEstimated / population).toFixed(2);
+  let costPerPerson = costEstimated / population;
 
-  form.query("[affected-days]").innerText = affectedDays;
-  form.query("[affected-capacity]").innerText = affectedCapacity;
-  form.query("[cost-estimated]").innerText = costEstimated;
-  form.query("[cost-per-person]").innerText = costPerPerson;
+  query("[affected-days]").innerText = affectedDays;
+  query("[affected-capacity]").innerText = affectedCapacity;
+  query("[cost-estimated]").innerText = currencyFormat.format(costEstimated);
+  query("[cost-per-person]").innerText = currencyFormat.format(costPerPerson);
 
   // show results
-  form.query(".alert").classList.remove("d-none");
+  query(".alert").classList.remove("d-none");
 });
