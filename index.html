@@ -21,7 +21,7 @@
 
         <form class="col-md-8 offset-md-2 mt-4">
           <div class="form-group">
-            <label for="cost">Value of contract or program</label>
+            <label for="cost">Value of established financing (€)</label>
             <div class="input-group mb-2">
               <input
                 required
@@ -36,32 +36,12 @@
               </div>
             </div>
             <small class="form-text text-muted">
-              Please enter the cost value of the intended activity.
+              Please enter the cost value of the impacted activity(ies).
             </small>
           </div>
 
           <div class="form-group">
-            <label for="volume">Volume</label>
-            <div class="input-group mb-2">
-              <input
-                required
-                type="number"
-                class="form-control"
-                id="volume"
-                placeholder="30.000"
-                min="0"
-              />
-              <div class="input-group-append">
-                <div class="input-group-text">units</div>
-              </div>
-            </div>
-            <small class="form-text text-muted">
-              Please enter the volume of the intended activity.
-            </small>
-          </div>
-
-          <div class="form-group">
-            <label for="days">Weekdays of affected service</label>
+            <label for="days">Weekdays of activity impacted by the cyberattack in the affected service(s)</label>
             <div class="input-group mb-2">
               <select id="days" class="form-control" required>
                 <option>5</option>
@@ -72,12 +52,12 @@
               </div>
             </div>
             <small class="form-text text-muted">
-              Please enter the weekdays of the intended activity (5 only considers working week days).
+              Please enter the weekdays harmed by the cyberattack. (5 only considers working week days).
             </small>
           </div>
 
           <div class="form-group">
-            <label for="proporcion">Proporcion of the affectance</label>
+            <label for="proporcion">Impacted installed capacity</label>
             <div class="input-group mb-2">
               <input
                 required
@@ -93,12 +73,12 @@
               </div>
             </div>
             <small class="form-text text-muted">
-              Please enter the percentage of the activity that was afffected by the attack.
+              Please enter the percentage of the activity harmed by the cyberattack.
             </small>
           </div>
 
           <div class="form-group">
-            <label for="population">Population</label>
+            <label for="population">Population served by the hospital</label>
             <div class="input-group mb-2">
               <input
                 required
@@ -113,7 +93,7 @@
               </div>
             </div>
             <small class="form-text text-muted">
-              Please enter the population that the activity serves on a normal basis.
+              Please enter the amount of people served by the hospital (e.g., population of influence area).
             </small>
           </div>
 
@@ -122,19 +102,19 @@
 
         <div class="col-md-8 offset-md-2 mt-4">
           <div class="alert alert-success overflow-hidden d-none" role="alert">
-            <h4 class="alert-heading">Cost estimated</h4>
+            <h4 class="alert-heading">Estimated direct cost of the cyberattack</h4>
             <p><strong cost-estimated></strong></p>
             <h4 class="alert-heading">Cost per person</h4>
             <p><span cost-per-person></span></p>
             <h4 class="alert-heading">Affected percentage</h4>
             <p>
-              <span affected-days></span> days
+              <span affected-days></span> of weekdays in a year
               <br />
-              <span affected-capacity></span> capacity
+              <span affected-capacity></span> of installed capacity for the year
             </p>
             <hr />
             <p>
-              Please take in consideration all the limitations described when interpreting these results.
+              Disclaimer: please take into consideration that all limitations described in the paper apply while interpreting these results.
             </p>
           </div>
         </div>

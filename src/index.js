@@ -23,7 +23,6 @@ const formClick = (event) => {
 const calculate = () => {
   // get form values
   let cost = Number(form.query('#cost').value);
-  let volume = Number(form.query('#volume').value);
   let weekdays = Number(form.query('#days').value);
   let proporcion = Number(form.query('#proporcion').value) / 100;
   let population = Number(form.query('#population').value);
